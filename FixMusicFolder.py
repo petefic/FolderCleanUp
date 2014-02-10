@@ -18,7 +18,7 @@ if (folderFound == true):
     #iterate through all files in root directory
     for root, dirs, filenames in os.walk(rootdir):
         #skip the iTunes folder
-        if os.getcwd() != "iTunes":
+        if os.getcwd().endswith("iTunes") == False:
             for filename in filenames:
                 # Get the absolute path to the file.
                 filename = os.path.join(root, filename)
